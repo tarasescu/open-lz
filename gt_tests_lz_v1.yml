@@ -134,7 +134,7 @@ dynamic_groups_configuration:
   dynamic_groups: {}
 policies_configuration:
   supplied_policies:
-    isv-prod-admin-policy:
+    isv-demo-prod-admin-policy:
       name: isv-demo-prod-admin-policy
       description: isv demo-prod admin policy
       compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
@@ -337,7 +337,7 @@ network_configuration:
     vision-environment: vision
   network_configuration_categories:
     HUB:
-      category_compartment_key: CMP-NETWORK-KEY
+      category_compartment_key: ISV-DEMO-NTW-KEY
       category_freeform_tags:
         vision-sub-environment: hub
       non_vcn_specific_gateways:
