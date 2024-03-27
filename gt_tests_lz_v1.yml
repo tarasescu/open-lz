@@ -97,12 +97,12 @@ groups_configuration:
     isv-prod-admin-group:
       name: isv-prod-admin-group
       description: EBS extension group for ebs prod management
-    ebs-nprod-admin-group:
-      name: ebs-nprod-admin-group
-      description: EBS extension group for ebs Non prod management
-    ebs-mgt-admin-group:
-      name: ebs-mgt-admin-group
-      description: EBS extension group for ebs management
+    # ebs-nprod-admin-group:
+    #   name: ebs-nprod-admin-group
+    #   description: EBS extension group for ebs Non prod management
+    # ebs-mgt-admin-group:
+    #   name: ebs-mgt-admin-group
+    #   description: EBS extension group for ebs management
 dynamic_groups_configuration:
   dynamic_groups: {}
 policies_configuration:
@@ -110,7 +110,7 @@ policies_configuration:
     isv-prod-admin-policy:
       name: isv-prod-admin-policy
       description: ebs prod policy
-      compartment_ocid: "ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq"
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       statements:
       - allow group isv-prod-admin-group to read all-resources in compartment isv-prod-cmp
       - allow group isv-prod-admin-group to manage instance-family in compartment
