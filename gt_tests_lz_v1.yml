@@ -96,13 +96,13 @@ groups_configuration:
   groups:
     isv-prod-admin-group:
       name: isv-prod-admin-group
-      description: EBS extension group for ebs prod management
-    # ebs-nprod-admin-group:
-    #   name: ebs-nprod-admin-group
-    #   description: EBS extension group for ebs Non prod management
-    # ebs-mgt-admin-group:
-    #   name: ebs-mgt-admin-group
-    #   description: EBS extension group for ebs management
+      description: ISV admin group for PROD management
+    isv-uat-admin-group:
+      name: isv-uat-admin-group
+      description: ISV admin group for UAT management
+    isv-dev-admin-group:
+      name: isv-dev-admin-group
+      description: ISV admin group for dev management
 dynamic_groups_configuration:
   dynamic_groups: {}
 policies_configuration:
@@ -137,47 +137,47 @@ policies_configuration:
       - allow group isv-prod-admin-group to manage object-family in compartment isv-prod-cmp
       - allow group isv-prod-admin-group to manage repos in compartment isv-prod-cmp
       - allow group isv-prod-admin-group to manage cloudevents-rules in compartment isv-prod-cmp
-    # ebs-nprod-admin-policy:
-    #   name: ebs-nprod-admin-policy
-    #   description: ebs non prod policy
-    #   compartment_ocid: "<OCID-COMPARTMENT-ROOT>"
-    #   statements:
-    #   - allow group ebs-nprod-admin-group to read all-resources in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage instance-family in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage database-family in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage load-balancers in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage volume-family in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage tag-namespaces in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage alarms in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage metrics in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage object-family in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage orm-stacks in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage orm-jobs in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage orm-config-source-providers in
-    #     compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to read audit-events in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to read work-requests in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage bastion-session in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to read instance-agent-plugins in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage functions-family in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage api-gateway-family in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage ons-family in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage streams in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage cluster-family in compartment
-    #     ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage logs in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage object-family in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage repos in compartment ebs-cmp:ebs-nprod-cmp
-    #   - allow group ebs-nprod-admin-group to manage cloudevents-rules in compartment
-    #     ebs-cmp:ebs-nprod-cmp
+    isv-uat-admin-policy:
+      name: ebs-nprod-admin-policy
+      description: ebs non prod policy
+      # compartment_ocid: "<OCID-COMPARTMENT-ROOT>"
+      statements:
+      - allow group ebs-nprod-admin-group to read all-resources in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage instance-family in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage database-family in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage load-balancers in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage volume-family in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage tag-namespaces in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage alarms in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage metrics in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage object-family in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage orm-stacks in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage orm-jobs in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage orm-config-source-providers in
+        compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to read audit-events in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to read work-requests in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage bastion-session in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to read instance-agent-plugins in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage functions-family in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage api-gateway-family in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage ons-family in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage streams in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage cluster-family in compartment
+        isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage logs in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage object-family in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage repos in compartment isv-uat-cmp
+      - allow group ebs-nprod-admin-group to manage cloudevents-rules in compartment
+        isv-uat-cmp
     # ebs-mgt-admin-policy:
     #   name: ebs-mgt-admin-policy
     #   description: ebs mngmt policy
