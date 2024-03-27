@@ -64,7 +64,7 @@ compartments_configuration:
           defined_tags:
           freeform_tags: {}
     ISV-DEV-KEY:
-      name: isv-prod-cmp
+      name: isv-dev-cmp
       description: ISV compartment for all resources related to DEV
       # parent_id: "<OCID-COMPARTMENT-ROOT>"
       defined_tags:
