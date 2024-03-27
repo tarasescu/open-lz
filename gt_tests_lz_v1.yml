@@ -110,7 +110,7 @@ policies_configuration:
     isv-prod-admin-policy:
       name: isv-prod-admin-policy
       description: ebs prod policy
-      compartment_ocid: "<OCID-COMPARTMENT-ROOT>"
+      # compartment_ocid: "<OCID-COMPARTMENT-ROOT>"
       statements:
       - allow group isv-prod-admin-group to read all-resources in compartment isv-prod-cmp
       - allow group isv-prod-admin-group to manage instance-family in compartment
