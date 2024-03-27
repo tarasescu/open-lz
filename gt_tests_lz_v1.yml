@@ -167,6 +167,36 @@ policies_configuration:
       - allow group isv-uat-admin-group to manage object-family in compartment isv-uat-cmp
       - allow group isv-uat-admin-group to manage repos in compartment isv-uat-cmp
       - allow group isv-uat-admin-group to manage cloudevents-rules in compartment isv-uat-cmp
+    isv-dev-admin-policy:
+      name: isv-dev-admin-policy
+      description: isv uat admin policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements:
+      - allow group isv-dev-admin-group to read all-resources in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage instance-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage database-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage load-balancers in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage volume-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage tag-namespaces in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage alarms in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage metrics in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage object-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage orm-stacks in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage orm-jobs in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage orm-config-source-providers in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to read audit-events in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to read work-requests in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage bastion-session in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to read instance-agent-plugins in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage functions-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage api-gateway-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage ons-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage streams in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage cluster-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage logs in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage object-family in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage repos in compartment isv-dev-cmp
+      - allow group isv-dev-admin-group to manage cloudevents-rules in compartment isv-dev-cmp      
     # ebs-mgt-admin-policy:
     #   name: ebs-mgt-admin-policy
     #   description: ebs mngmt policy
