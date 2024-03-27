@@ -48,12 +48,6 @@ compartments_configuration:
           description: ISV uat network compartment
           defined_tags:
           freeform_tags: {}
-          children:
-            ISV-UAT-NTW-KEY2:
-              name: isv-uat-ntw2
-              description: ISV uat network compartment
-              defined_tags:
-              freeform_tags: {}
         ISV-UAT-SEC-KEY:
           name: isv-uat-sec
           description: ISV uat security compartment
