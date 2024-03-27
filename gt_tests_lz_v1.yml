@@ -403,7 +403,7 @@ network_configuration:
               security_list_keys:
               - default_security_list
     SPOKE-CHANNELS:
-      category_compartment_key: CMP-CHANNELS-NETWORK-KEY
+      category_compartment_key: ISV-DEMO-NTW-KEY
       category_freeform_tags:
         vision-sub-environment: spokechannels
       vcns:
