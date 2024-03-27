@@ -7,12 +7,12 @@
 ---
 compartments_configuration:
   enable_delete: 'true'
-  # default_parent_ocid: "<OCID-COMPARTMENT-ROOT>"
+  default_parent_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
   compartments:
     ISV-PROD-KEY:
       name: isv-prod-cmp
       description: ISV compartment for all resources related to PROD
-      # parent_id: "<OCID-COMPARTMENT-ROOT>"
+      parent_id: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       defined_tags:
       freeform_tags:
       children:
@@ -39,7 +39,7 @@ compartments_configuration:
     ISV-UAT-KEY:
       name: isv-uat-cmp
       description: ISV compartment for all resources related to UAT
-      # parent_id: "<OCID-COMPARTMENT-ROOT>"
+      parent_id: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       defined_tags:
       freeform_tags:
       children:
@@ -66,7 +66,7 @@ compartments_configuration:
     ISV-DEV-KEY:
       name: isv-dev-cmp
       description: ISV compartment for all resources related to DEV
-      # parent_id: "<OCID-COMPARTMENT-ROOT>"
+      parent_id: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       defined_tags:
       freeform_tags:
       children:
@@ -110,7 +110,7 @@ policies_configuration:
     isv-prod-admin-policy:
       name: isv-prod-admin-policy
       description: ebs prod policy
-      compartment_ocid: ococid1.compartment.oc1..aaaaaaaaz4qzu7snhjcenbxcxbiwfm6gfeq4las2d6a5ndz3kewwpyqrkc6a
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       statements:
       - allow group isv-prod-admin-group to read all-resources in compartment isv-prod-cmp
       - allow group isv-prod-admin-group to manage instance-family in compartment isv-prod-cmp
