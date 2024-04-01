@@ -85,9 +85,9 @@ policies_configuration:
       - allow group isv-lz-mgmt-iam-admins-group to inspect users in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to inspect groups in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to read policies in tenancy
-      - allow group isv-lz-mgmt-iam-admins-group to manage groups in tenancy where all {target.group.name != 'Administrators'}
+      # - allow group isv-lz-mgmt-iam-admins-group to manage groups in tenancy where all {target.group.name != 'Administrators'}
       - allow group isv-lz-mgmt-iam-admins-group to inspect identity-providers in tenancy
-      - allow group isv-lz-mgmt-iam-admins-group to manage identity-providers in tenancy where any {request.operation = 'AddIdpGroupMapping', request.operation = 'DeleteIdpGroupMapping'}
+      # - allow group isv-lz-mgmt-iam-admins-group to manage identity-providers in tenancy where any {request.operation = 'AddIdpGroupMapping', request.operation = 'DeleteIdpGroupMapping'}
       - allow group isv-lz-mgmt-iam-admins-group to manage dynamic-groups in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to manage authentication-policies in tenancy,
       - allow group isv-lz-mgmt-iam-admins-group to manage network-sources in tenancy
@@ -96,7 +96,7 @@ policies_configuration:
       - allow group isv-lz-mgmt-iam-admins-group to use cloud-shell in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to manage tag-defaults in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to manage tag-namespaces in tenancy
-      - allow group isv-lz-mgmt-iam-admins-group to manage users in tenancy  where any {request.operation = 'ListApiKeys',request.operation = 'ListAuthTokens',request.operation = 'ListCustomerSecretKeys',request.operation = 'UploadApiKey',request.operation = 'DeleteApiKey',request.operation = 'UpdateAuthToken',request.operation = 'CreateAuthToken',request.operation = 'DeleteAuthToken',request.operation = 'CreateSecretKey',request.operation = 'UpdateCustomerSecretKey',request.operation = 'DeleteCustomerSecretKey',request.operation = 'UpdateUserCapabilities'}
+      # - allow group isv-lz-mgmt-iam-admins-group to manage users in tenancy  where any {request.operation = 'ListApiKeys',request.operation = 'ListAuthTokens',request.operation = 'ListCustomerSecretKeys',request.operation = 'UploadApiKey',request.operation = 'DeleteApiKey',request.operation = 'UpdateAuthToken',request.operation = 'CreateAuthToken',request.operation = 'DeleteAuthToken',request.operation = 'CreateSecretKey',request.operation = 'UpdateCustomerSecretKey',request.operation = 'DeleteCustomerSecretKey',request.operation = 'UpdateUserCapabilities'}
 
     # isv-demo-uat-admin-policy:
     #   name: isv-demo-uat-admin-policy
