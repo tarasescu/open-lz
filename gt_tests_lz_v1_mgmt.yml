@@ -16,23 +16,23 @@ compartments_configuration:
       defined_tags:
       freeform_tags:
       children:
-        ISV-MGMT-NTW-KEY:
-          name: isv-mgmt-ntw
+        ISV-LZ-MGMT-NTW-KEY:
+          name: isv-lz-mgmt-ntw
           description: ISV MGMT shared network compartment
           defined_tags:
           freeform_tags: {}
-        ISV-MGMT-SEC-KEY:
-          name: isv-mgmt-sec
+        ISV-LZ-MGMT-SEC-KEY:
+          name: isv-lz-mgmt-sec
           description: ISV MGMT shared security compartment
           defined_tags:
           freeform_tags: {}
-        ISV-MGMT-APP-KEY:
-          name: isv-mgmt-app
+        ISV-LZ-MGMT-APP-KEY:
+          name: isv-lz-mgmt-app
           description: ISV MGMT shared app compartment
           defined_tags:
           freeform_tags: {}
-        ISV-MGMT-DB-KEY:
-          name: isv-mgmt-db
+        ISV-LZ-MGMT-DB-KEY:
+          name: isv-lz-mgmt-db
           description: ISV MGMT shared db compartment
           defined_tags:
           freeform_tags: {}
@@ -40,15 +40,39 @@ groups_configuration:
   default_defined_tags:
   default_freeform_tags:
   groups:
-    isv-demo-admin-group:
-      name: isv-demo-admin-group
-      description: ISV admin group for DEMO-PROD management
-    isv-demo-uat-admin-group:
-      name: isv-demo-uat-admin-group
-      description: ISV admin group for DEMO-UAT management
-    isv-demo-dev-admin-group:
-      name: isv-demo-dev-admin-group
-      description: ISV admin group for DEMO-DEV management
+    isv-lz-mgmt-iam-admins-group:
+      name: isv-lz-mgmt-iam-admins-group
+      description: ISV LZ-MGMT admins group allowed to manage groups (except Administrators)
+    isv-lz-mgmt-platform-admins-group:
+      name: isv-lz-mgmt-platform-admins-group
+      description: ISV platform admins group manage all cost, billing, and budget related resources
+    isv-lz-mgmt-ops-admins-group:
+      name: isv-lz-mgmt-ops-admins-group
+      description: ISV ops admins group are allowed to manage alarms, topics and subscription of notification service as well as read metrics and announcements
+    isv-lz-mgmt-ntw-admins-group:
+      name: isv-lz-mgmt-ntw-admins-group
+      description: ISV ntw admins group are allowed to manage all network resources
+    isv-lz-mgmt-sec-admins-group:
+      name: isv-lz-mgmt-sec-admins-group
+      description: ISV sec admins group are allowed to manage all security related resources
+    isv-lz-mgmt-app-admins-group:
+      name: isv-lz-mgmt-app-admins-group
+      description: ISV app admins group are allowed to manage all compute and storage resources that host workloads
+    isv-lz-mgmt-db-admins-group:
+      name: isv-lz-mgmt-db-admins-group
+      description: ISV app admins group are allowed to manage databases, database storage, and networking
+    isv-lz-mgmt-billing-admins-group:
+      name: isv-lz-mgmt-billing-admins-group
+      description: ISV billing admins group are allowed to manage invoice information, overview off all costs, compiling reports, download invoices, tax settings, invoice dispute management
+    isv-lz-mgmt-finops-admins-group:
+      name: isv-lz-mgmt-finops-admins-group
+      description: ISV finops admins group are allowed to manage cost analysis, global and on all accounts, Define quotas, read all resources and utilization
+    isv-lz-mgmt-product-admins-group:
+      name: isv-lz-mgmt-product-admins-group
+      description: ISV product admins group are allowed to manage compartment Costs Analysis, view all resources in the owned compartment
+    isv-lz-mgmt-support-admins-group:
+      name: isv-lz-mgmt-support-admins-group
+      description: ISV support admins group are allowed to raise tickets, view on all ticket requests
 dynamic_groups_configuration:
   dynamic_groups: {}
 policies_configuration:
