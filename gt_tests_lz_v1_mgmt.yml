@@ -1,0 +1,271 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            
+# ####################################################################################################### #
+
+
+---
+compartments_configuration:
+  enable_delete: 'true'
+  default_parent_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+  compartments:
+    ISV-MGMT-KEY:
+      name: isv-mgmt-cmp
+      description: ISV compartment for Management - managed by the ISV
+      parent_id: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      defined_tags:
+      freeform_tags:
+      children:
+        ISV-MGMT-NTW-KEY:
+          name: isv-mgmt-ntw
+          description: ISV MGMT shared network compartment
+          defined_tags:
+          freeform_tags: {}
+        ISV-MGMT-SEC-KEY:
+          name: isv-mgmt-sec
+          description: ISV MGMT shared security compartment
+          defined_tags:
+          freeform_tags: {}
+        ISV-MGMT-APP-KEY:
+          name: isv-mgmt-app
+          description: ISV MGMT shared app compartment
+          defined_tags:
+          freeform_tags: {}
+        ISV-MGMT-DB-KEY:
+          name: isv-mgmt-db
+          description: ISV MGMT shared db compartment
+          defined_tags:
+          freeform_tags: {}
+groups_configuration:
+  default_defined_tags:
+  default_freeform_tags:
+  groups:
+    isv-demo-admin-group:
+      name: isv-demo-admin-group
+      description: ISV admin group for DEMO-PROD management
+    isv-demo-uat-admin-group:
+      name: isv-demo-uat-admin-group
+      description: ISV admin group for DEMO-UAT management
+    isv-demo-dev-admin-group:
+      name: isv-demo-dev-admin-group
+      description: ISV admin group for DEMO-DEV management
+dynamic_groups_configuration:
+  dynamic_groups: {}
+policies_configuration:
+  supplied_policies:
+    isv-demo-prod-admin-policy:
+      name: isv-demo-prod-admin-policy
+      description: isv demo-prod admin policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements:
+      - allow group isv-demo-admin-group to read all-resources in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage instance-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage database-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage load-balancers in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage volume-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage tag-namespaces in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage alarms in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage metrics in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage object-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage orm-stacks in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage orm-jobs in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage orm-config-source-providers in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to read audit-events in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to read work-requests in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage bastion-session in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to read instance-agent-plugins in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage functions-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage api-gateway-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage ons-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage streams in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage cluster-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage logs in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage object-family in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage repos in compartment isv-demo-cmp
+      - allow group isv-demo-admin-group to manage cloudevents-rules in compartment isv-demo-cmp
+    # isv-demo-uat-admin-policy:
+    #   name: isv-demo-uat-admin-policy
+    #   description: isv demo-uat admin policy
+    #   compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+    #   statements:
+    #   - allow group isv-demo-uat-admin-group to read all-resources in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage instance-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage database-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage load-balancers in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage volume-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage tag-namespaces in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage alarms in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage metrics in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage object-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage orm-stacks in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage orm-jobs in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage orm-config-source-providers in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to read audit-events in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to read work-requests in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage bastion-session in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to read instance-agent-plugins in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage functions-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage api-gateway-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage ons-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage streams in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage cluster-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage logs in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage object-family in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage repos in compartment isv-demo-uat-cmp
+    #   - allow group isv-demo-uat-admin-group to manage cloudevents-rules in compartment isv-demo-uat-cmp
+    # isv-demo-dev-admin-policy:
+    #   name: isv-demo-dev-admin-policy
+    #   description: isv uat admin policy
+    #   compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+    #   statements:
+    #   - allow group isv-demo-dev-admin-group to read all-resources in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage instance-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage database-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage load-balancers in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage volume-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage tag-namespaces in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage alarms in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage metrics in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage object-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage orm-stacks in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage orm-jobs in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage orm-config-source-providers in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to read audit-events in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to read work-requests in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage bastion-session in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to read instance-agent-plugins in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage functions-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage api-gateway-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage ons-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage streams in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage cluster-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage logs in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage object-family in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage repos in compartment isv-demo-dev-cmp
+    #   - allow group isv-demo-dev-admin-group to manage cloudevents-rules in compartment isv-demo-dev-cmp      
+   
+
+network_configuration:
+  default_enable_cis_checks: false
+  default_freeform_tags:
+    vision-environment: vision
+  network_configuration_categories:
+    HUB:
+      category_compartment_key: ISV-DEMO-NTW-KEY
+      category_freeform_tags:
+        vision-sub-environment: hub
+      non_vcn_specific_gateways:
+        dynamic_routing_gateways:
+          DRG-HUB-KEY:
+            display_name: drg-fra-hub
+            drg_attachments:
+              DRG-HUB-VCN-CH-ATTACH-KEY:
+                display_name: drg-hub-vcn-ch-attach
+                network_details:
+                  attached_resource_key: VCN-CHANNELS-KEY
+                  type: VCN
+              DRG-HUB-VCN-H-ATTACH-KEY:
+                display_name: drg-hub-vcn-h-attach
+                network_details:
+                  attached_resource_key: VCN-HUB-KEY
+                  type: VCN
+      vcns:
+        VCN-HUB-KEY:
+          block_nat_traffic: false
+          cidr_blocks:
+          - 10.0.0.0/24
+          default-security-list:
+            egress_rules:
+            - description: egress to 0.0.0.0/0 over ALL protocols
+              dst: 0.0.0.0/0
+              dst_type: CIDR_BLOCK
+              protocol: ALL
+              stateless: false
+            ingress_rules:
+            - description: ingress from 0.0.0.0/0 over TCP22
+              dst_port_max: 22
+              dst_port_min: 22
+              protocol: TCP
+              src: 0.0.0.0/0
+              src_type: CIDR_BLOCK
+              stateless: false
+            - description: ingress from 0.0.0.0/0 over TCP443
+              dst_port_max: 443
+              dst_port_min: 443
+              protocol: TCP
+              src: 0.0.0.0/0
+              src_type: CIDR_BLOCK
+              stateless: false
+          display_name: vcn-fra-hub
+          dns_label: vcnfrahub
+          is_ipv6enabled: false
+          is_oracle_gua_allocation_enabled: false
+          route_tables:
+            SUBNET-HUB-RT-KEY:
+              display_name: subnet-hub-rt
+              route_rules: {}
+          subnets:
+            SUBNET-HUB-KEY:
+              cidr_block: 10.0.0.0/26
+              dhcp_options_key: default_dhcp_options
+              display_name: sn-fra-hub-fw
+              dns_label: snfrahubfw
+              ipv6cidr_blocks: []
+              prohibit_internet_ingress: true
+              prohibit_public_ip_on_vnic: true
+              route_table_key: SUBNET-HUB-RT-KEY
+              security_list_keys:
+              - default_security_list
+    SPOKE-CHANNELS:
+      category_compartment_key: ISV-DEMO-NTW-KEY
+      category_freeform_tags:
+        vision-sub-environment: spokechannels
+      vcns:
+        VCN-CHANNELS-KEY:
+          block_nat_traffic: false
+          cidr_blocks:
+          - 10.1.0.0/24
+          default-security-list:
+            egress_rules:
+            - description: egress to 0.0.0.0/0 over ALL protocols
+              dst: 0.0.0.0/0
+              dst_type: CIDR_BLOCK
+              protocol: ALL
+              stateless: false
+            ingress_rules:
+            - description: ingress from 0.0.0.0/0 over TCP22
+              dst_port_max: 22
+              dst_port_min: 22
+              protocol: TCP
+              src: 0.0.0.0/0
+              src_type: CIDR_BLOCK
+              stateless: false
+            - description: ingress from 0.0.0.0/0 over TCP443
+              dst_port_max: 443
+              dst_port_min: 443
+              protocol: TCP
+              src: 0.0.0.0/0
+              src_type: CIDR_BLOCK
+              stateless: false
+          display_name: vcn-channels-np
+          dns_label: vcnchannelsnp
+          is_attach_drg: false
+          is_create_igw: false
+          is_ipv6enabled: false
+          is_oracle_gua_allocation_enabled: false
+          route_tables:
+            SUBNET-CH-RT-KEY:
+              display_name: subnet-channels-rt
+              route_rules: {}
+          subnets:
+            SUBNET-CH-KEY:
+              cidr_block: 10.1.0.0/26
+              dhcp_options_key: default_dhcp_options
+              display_name: sn-channels-np-common
+              dns_label: snchnpcommon
+              ipv6cidr_blocks: []
+              prohibit_internet_ingress: true
+              prohibit_public_ip_on_vnic: true
+              route_table_key: SUBNET-CH-RT-KEY
+              security_list_keys:
+              - default_security_list
