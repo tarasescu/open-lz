@@ -1,0 +1,38 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            
+# ####################################################################################################### #
+
+
+---
+compartments_configuration:
+  enable_delete: 'true'
+  default_parent_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+  compartments:
+    ISV-MGMT-KEY:
+      name: isv-mgmt-cmp
+      description: ISV compartment for Management - managed by the ISV
+      parent_id: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      defined_tags:
+      freeform_tags:
+      children:
+        ISV-LZ-MGMT-NTW-KEY:
+          name: isv-lz-mgmt-ntw
+          description: ISV MGMT shared network compartment
+          defined_tags:
+          freeform_tags: {}
+        ISV-LZ-MGMT-SEC-KEY:
+          name: isv-lz-mgmt-sec
+          description: ISV MGMT shared security compartment
+          defined_tags:
+          freeform_tags: {}
+        ISV-LZ-MGMT-APP-KEY:
+          name: isv-lz-mgmt-app
+          description: ISV MGMT shared app compartment
+          defined_tags:
+          freeform_tags: {}
+        ISV-LZ-MGMT-DB-KEY:
+          name: isv-lz-mgmt-db
+          description: ISV MGMT shared db compartment
+          defined_tags:
+          freeform_tags: {}
