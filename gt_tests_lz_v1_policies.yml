@@ -45,3 +45,13 @@ policies_configuration:
       - allow group isv-lz-mgmt-platform-admins-group to read rate-cards in tenancy
       - allow group isv-lz-mgmt-platform-admins-group to manage invoices in tenancy
       - allow group isv-lz-mgmt-platform-admins-group to manage invoice-preferences in tenancy
+    isv-lz-mgmt-ops-policy:
+      name: isv-lz-mgmt-ops-policy
+      description: isv-lz-mgmt-ops-policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements: 
+      - allow group isv-lz-mgmt-ops-admins-group to read metrics in tenancy
+      - allow group isv-lz-mgmt-ops-admins-group to manage alarms in tenancy
+      - allow group isv-lz-mgmt-ops-admins-group to manage ons-topics in tenancy
+      - allow group isv-lz-mgmt-ops-admins-group to manage ons-subscriptions in tenancy
+      - allow group isv-lz-mgmt-ops-admins-group to read announcements in tenancy
