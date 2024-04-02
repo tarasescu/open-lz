@@ -27,7 +27,19 @@ policies_configuration:
       - allow group isv-lz-mgmt-iam-admins-group to manage tag-defaults in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to manage tag-namespaces in tenancy
       - allow group isv-lz-mgmt-iam-admins-group to manage users in tenancy  where any {request.operation = 'ListApiKeys',request.operation = 'ListAuthTokens',request.operation = 'ListCustomerSecretKeys',request.operation = 'UploadApiKey',request.operation = 'DeleteApiKey',request.operation = 'UpdateAuthToken',request.operation = 'CreateAuthToken',request.operation = 'DeleteAuthToken',request.operation = 'CreateSecretKey',request.operation = 'UpdateCustomerSecretKey',request.operation = 'DeleteCustomerSecretKey',request.operation = 'UpdateUserCapabilities'}
-
+    isv-lz-mgmt-iam-admins-policy:
+      name: isv-lz-mgmt-platform-policy
+      description: isv-lz-mgmt-platform-policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements:
+# - Endorse group isv-lz-mgmt-platform-admins-group to read objects in tenancy usage-report
+      - Allow group isv-lz-mgmt-platform-admins-group to manage usage-report in tenancy
+      - Allow group isv-lz-mgmt-platform-admins-group to manage usage-budgets in tenancy
+      - Allow group isv-lz-mgmt-platform-admins-group to manage accountmanagement-family in tenancy
+      - Allow group isv-lz-mgmt-platform-admins-group to manage tickets in tenancy
+      - Allow group isv-lz-mgmt-platform-admins-group to read computed-usages, invoices, subscribed-services in tenancy
+      - Allow group isv-lz-mgmt-platform-admins-group to read subscription, billing-schedules, subscribed-services, rate-cards in tenancy
+      - Allow group isv-lz-mgmt-platform-admins-group to manage invoices, invoice-preferences in tenancy
     # isv-demo-uat-admin-policy:
     #   name: isv-demo-uat-admin-policy
     #   description: isv demo-uat admin policy
