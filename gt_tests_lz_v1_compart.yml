@@ -48,24 +48,24 @@ compartments_configuration:
           description: ISV CUST1 root compartment
           defined_tags:
           freeform_tags: {}
-		      children:
-			      ISV-LZ-CUST1-NTW-KEY:
-			        name: isv-lz-cust1-ntw
-			        description: ISV CUST1 network compartment
+          children:
+            ISV-LZ-CUST1-NTW-KEY:
+              name: isv-lz-cust1-ntw
+              description: ISV CUST1 network compartment
               defined_tags:
               freeform_tags: {}
-			      ISV-LZ-CUST1-SEC-KEY:
-			        name: isv-lz-cust1-sec
-			        description: ISV CUST1 sec compartment
+            ISV-LZ-CUST1-SEC-KEY:
+              name: isv-lz-cust1-sec
+              description: ISV CUST1 sec compartment
               defined_tags:
               freeform_tags: {}
-			      ISV-LZ-CUST1-APP-KEY:
-			        name: isv-lz-cust1-app
-			        description: ISV CUST1 app compartment
+            ISV-LZ-CUST1-APP-KEY:
+              name: isv-lz-cust1-app
+              description: ISV CUST1 app compartment
               defined_tags:
               freeform_tags: {}
-			      ISV-LZ-CUST1-DB-KEY:
-			        name: isv-lz-cust1-db
-			        description: ISV CUST1 db compartment
+            ISV-LZ-CUST1-DB-KEY:
+              name: isv-lz-cust1-db
+              description: ISV CUST1 db compartment
               defined_tags:
               freeform_tags: {}
