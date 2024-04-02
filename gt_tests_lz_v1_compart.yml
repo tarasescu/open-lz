@@ -44,7 +44,7 @@ compartments_configuration:
       freeform_tags:
       children:
         ISV-LZ-CUST1-KEY:
-          name: isv-lz-CUST1
+          name: isv-lz-cust1
           description: ISV CUST1 root compartment
           defined_tags:
           freeform_tags: {}

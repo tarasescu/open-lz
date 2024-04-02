@@ -11,7 +11,7 @@ network_configuration:
     vision-environment: vision
   network_configuration_categories:
     HUB:
-      category_compartment_key: ISV-LZ-MGMT-NTW-KEY
+      category_compartment_key: ISV-LZ-CUST1-NTW-KEY
       category_freeform_tags:
         vision-sub-environment: hub
       non_vcn_specific_gateways:
@@ -77,7 +77,7 @@ network_configuration:
               security_list_keys:
               - default_security_list
     SPOKE-CHANNELS:
-      category_compartment_key: ISV-LZ-MGMT-NTW-KEY
+      category_compartment_key: ISV-LZ-CUST1-NTW-KEY
       category_freeform_tags:
         vision-sub-environment: spokechannels
       vcns:
