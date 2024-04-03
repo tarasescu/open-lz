@@ -32,6 +32,8 @@ policies_configuration:
       description: isv-lz-mgmt-platform-policy
       compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       statements:
+      - define tenancy usage-report as ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      - endorse group isv-lz-mgmt-platform-admins-group to read objects in tenancy usage-report
       - allow group isv-lz-mgmt-platform-admins-group to manage usage-report in tenancy
       - allow group isv-lz-mgmt-platform-admins-group to manage usage-budgets in tenancy
       - allow group isv-lz-mgmt-platform-admins-group to manage accountmanagement-family in tenancy
