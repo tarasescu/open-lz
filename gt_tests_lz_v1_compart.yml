@@ -26,16 +26,16 @@ compartments_configuration:
           description: ISV MGMT shared security compartment
           defined_tags:
           freeform_tags: {}
-        ISV-LZ-MGMT-APP-KEY:
-          name: isv-lz-mgmt-app
-          description: ISV MGMT shared app compartment
-          defined_tags:
-          freeform_tags: {}
-        ISV-LZ-MGMT-DB-KEY:
-          name: isv-lz-mgmt-db
-          description: ISV MGMT shared db compartment
-          defined_tags:
-          freeform_tags: {}
+        # ISV-LZ-MGMT-APP-KEY:
+        #   name: isv-lz-mgmt-app
+        #   description: ISV MGMT shared app compartment
+        #   defined_tags:
+        #   freeform_tags: {}
+        # ISV-LZ-MGMT-DB-KEY:
+        #   name: isv-lz-mgmt-db
+        #   description: ISV MGMT shared db compartment
+        #   defined_tags:
+        #   freeform_tags: {}
     ISV-LZ-CUSTS-KEY:
       name: isv-lz-customers-cmp
       description: ISV compartment for Customers - managed by the ISV
