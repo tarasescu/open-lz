@@ -97,9 +97,15 @@ policies_configuration:
       - allow group isv-lz-mgmt-billing-admins-group to manage usage-report in tenancy
       - allow group isv-lz-mgmt-billing-admins-group to manage accountmanagement-family in tenancy
       - allow group isv-lz-mgmt-billing-admins-group to manage tickets in tenancy
-      - allow group isv-lz-mgmt-billing-admins-group to read computed-usages, invoices, subscribed-services in tenancy
-      - allow group isv-lz-mgmt-billing-admins-group to read subscription, billing-schedules, subscribed-services, rate-cards in tenancy
-      - allow group isv-lz-mgmt-billing-admins-group to manage invoices, invoice-preferences in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read computed-usages in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read invoices in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read subscribed-services in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read subscription in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read billing-schedules in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read subscribed-services in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to read rate-cards in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to manage invoices in tenancy
+      - allow group isv-lz-mgmt-billing-admins-group to manage invoice-preferences in tenancy
       - allow group isv-lz-mgmt-billing-admins-group to manage support-rewards in tenancy
 
 
