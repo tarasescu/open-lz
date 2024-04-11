@@ -86,4 +86,26 @@ policies_configuration:
       - allow group isv-lz-mgmt-sec-admins-group to manage secret-family in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
       - allow group isv-lz-mgmt-sec-admins-group to manage keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
       - allow service blockstorage, objectstorage-eu-frankfurt-1, FssOc1Prod, oke, streaming to use keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
-
+    isv-lz-isv-lz-cust1-app-policy:
+      name: isv-lz-isv-lz-cust1-app-policy
+      description: isv-lz-isv-lz-cust1-app-policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements: 
+      - allow group isv-lz-cust1-app-admins-group to manage instance-images in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage instances in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage object-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage volume-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage compute-management-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage instance-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to inspect volumes in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to use tag-namespaces in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app where target.tag-namespace.name = 'oracle-tags'
+      - allow service compute_management to use compute-capacity-reservations in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage auto-scaling-configuration in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage instance-console-connection in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage app-catalog-listing in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage dedicated-vm-hosts in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to read instance-agent-plugins in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage volume-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage file-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage buckets in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
+      - allow group isv-lz-cust1-app-admins-group to manage objects in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-app
