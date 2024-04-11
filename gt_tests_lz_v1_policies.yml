@@ -133,10 +133,10 @@ policies_configuration:
       description: isv-lz-isv-lz-cust1-db-ntw-policy
       compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       statements: 
-      - allow group isv-lz-cust1-db-ntw-admins-group to read virtual-network-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-db-ntw
-      - allow group isv-lz-cust1-db-ntw-admins-group to use vnics in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-db-ntw
-      - allow group isv-lz-cust1-db-ntw-admins-group to use subnets in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-db-ntw
-      - allow group isv-lz-cust1-db-ntw-admins-group to use network-security-groups in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-db-ntw
+      - allow group isv-lz-cust1-db-ntw-admins-group to read virtual-network-family in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
+      - allow group isv-lz-cust1-db-ntw-admins-group to use vnics in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
+      - allow group isv-lz-cust1-db-ntw-admins-group to use subnets in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
+      - allow group isv-lz-cust1-db-ntw-admins-group to use network-security-groups in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
 
 
 
