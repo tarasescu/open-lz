@@ -36,9 +36,6 @@ groups_configuration:
     isv-lz-mgmt-finops-admins-group:
       name: isv-lz-mgmt-finops-admins-group
       description: ISV finops admins group are allowed to manage cost analysis, global and on all accounts, Define quotas, read all resources and utilization
-    isv-lz-mgmt-ops-admins-group:
-      name: isv-lz-mgmt-ops-admins-group
-      description: ISV ops admins group are allowed to manage cost analysis, global and on all accounts, Define quotas, read all resources and utilization
     isv-lz-mgmt-product-admins-group:
       name: isv-lz-mgmt-product-admins-group
       description: ISV product admins group are allowed to manage compartment Costs Analysis, view all resources in the owned compartment
