@@ -92,8 +92,8 @@ policies_configuration:
       description: isv-lz-mgmt-billing-admins-policy
       compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
       statements: 
-      - Define tenancy usage-report as ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
-      - Endorse group isv-lz-mgmt-billing-admins-group to read objects in tenancy usage-report
+      - define tenancy usage-report as ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      - endorse group isv-lz-mgmt-billing-admins-group to read objects in tenancy usage-report
       - allow group isv-lz-mgmt-billing-admins-group to manage usage-report in tenancy
       - allow group isv-lz-mgmt-billing-admins-group to manage accountmanagement-family in tenancy
       - allow group isv-lz-mgmt-billing-admins-group to manage tickets in tenancy
