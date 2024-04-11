@@ -80,4 +80,4 @@ policies_configuration:
       - allow group isv-lz-mgmt-sec-admins-group to inspect work-requests in tenancy
       - allow group isv-lz-mgmt-sec-admins-group to manage vss-family in tenancy
       - allow group isv-lz-mgmt-sec-admins-group to manage cloud-guard-family in tenancy
-      - allow group isv-lz-mgmt-sec-admins-group to manage virtual-network-family in compartment isv-lz-mgmt-ntw
+      - allow group isv-lz-mgmt-sec-admins-group to manage virtual-network-family in compartment isv-mgmt-cmp:isv-lz-mgmt-ntw
