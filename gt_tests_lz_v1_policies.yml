@@ -117,7 +117,6 @@ policies_configuration:
       - allow group isv-lz-mgmt-finops-admins-group to manage usage-budgets in tenancy
       - allow group isv-lz-mgmt-finops-admins-group to read metrics in tenancy
       - allow group isv-lz-mgmt-finops-admins-group to read all-resources in tenancy
-
     isv-lz-mgmt-ops-admins-policy:
       name: isv-lz-mgmt-ops-admins-policy
       description: isv-lz-mgmt-ops-admins-policy
@@ -127,7 +126,21 @@ policies_configuration:
       - allow group isv-lz-mgmt-ops-admins-group to manage ons-topics in tenancy
       - allow group isv-lz-mgmt-ops-admins-group to manage ons-subscriptions in tenancy
       - allow group isv-lz-mgmt-ops-admins-group to read announcements in tenancy
+    isv-lz-mgmt-support-admins-policy:
+      name: isv-lz-mgmt-support-admins-policy
+      description: isv-lz-mgmt-support-admins-policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements: 
+      - allow group isv-lz-mgmt-support-admins-group to manage resource-availability in tenancy
+      - allow group isv-lz-mgmt-support-admins-group to { QUOTA_READ, QUOTA_CREATE, QUOTA_DELETE, QUOTA_UPDATE, QUOTA_INSPECT } in tenancy
 
+    isv-lz-mgmt-product-admins-policy:
+      name: isv-lz-mgmt-product-admins-policy
+      description: isv-lz-mgmt-product-admins-policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements: 
+      - allow group isv-lz-mgmt-product-admins-group to manage usage-report in compartment isv-lz-customers-cmp:isv-lz-cust1
+      - allow group isv-lz-mgmt-product-admins-group to read all-resources in compartment isv-lz-customers-cmp:isv-lz-cust1
 
     isv-lz-cust1-app-policy:
       name: isv-lz-cust1-app-policy
