@@ -42,5 +42,17 @@ groups_configuration:
     isv-lz-mgmt-support-admins-group:
       name: isv-lz-mgmt-support-admins-group
       description: ISV support admins group are allowed to raise tickets, view on all ticket requests
+    isv-lz-cust1-app-admins-group:
+      name: isv-lz-cust1-app-admins-group
+      description: ISV Cust1 app admins group are allowed to raise tickets, view on all ticket requests
+    isv-lz-cust1-app-ntw-admins-group:
+      name: isv-lz-cust1-app-ntw-admins-group
+      description: ISV Cust1 app-ntw admins group are allowed to raise tickets, view on all ticket requests
+    isv-lz-cust1-db-admins-group:
+      name: isv-lz-cust1-db-admins-group
+      description: ISV Cust1 db admins group are allowed to raise tickets, view on all ticket requests
+    isv-lz-cust1-db-ntw-admins-group:
+      name: isv-lz-cust1-db-ntw-admins-group
+      description: ISV Cust1 db-ntw admins group are allowed to raise tickets, view on all ticket requests
 dynamic_groups_configuration:
   dynamic_groups: {}
