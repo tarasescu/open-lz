@@ -70,3 +70,14 @@ policies_configuration:
       - allow group isv-lz-mgmt-ntw-admins-group to manage bastion in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
       - allow group isv-lz-mgmt-ntw-admins-group to manage bastion-session in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
       - allow group isv-lz-mgmt-ntw-admins-group to manage load-balancers in compartment isv-lz-customers-cmp:isv-lz-cust1:isv-lz-cust1-ntw
+    isv-lz-mgmt-sec-policy:
+      name: isv-lz-mgmt-sec-policy
+      description: isv-lz-mgmt-sec-policy
+      compartment_ocid: ocid1.tenancy.oc1..aaaaaaaa4o4migdkop5joncqg3tbv73eknenxp7yojemgl5seteszzweuaxq
+      statements: 
+      - allow group isv-lz-mgmt-sec-admins-group to read instance-family in tenancy
+      - allow group isv-lz-mgmt-sec-admins-group to read instance-agent-plugins in tenancy
+      - allow group isv-lz-mgmt-sec-admins-group to inspect work-requests in tenancy
+      - allow group isv-lz-mgmt-sec-admins-group to manage vss-family in tenancy
+      - allow group isv-lz-mgmt-sec-admins-group to manage cloud-guard-family in tenancy
+      - allow group isv-lz-mgmt-sec-admins-group to manage virtual-network-family in compartment isv-lz-mgmt-ntw
