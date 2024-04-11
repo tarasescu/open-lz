@@ -81,3 +81,9 @@ policies_configuration:
       - allow group isv-lz-mgmt-sec-admins-group to manage vss-family in tenancy
       - allow group isv-lz-mgmt-sec-admins-group to manage cloud-guard-family in tenancy
       - allow group isv-lz-mgmt-sec-admins-group to manage virtual-network-family in compartment isv-mgmt-cmp:isv-lz-mgmt-ntw
+      - allow group isv-lz-mgmt-sec-admins-group to use key-delegate in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
+      - allow group isv-lz-mgmt-sec-admins-group to manage vaults in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
+      - allow group isv-lz-mgmt-sec-admins-group to manage secret-family in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
+      - allow group isv-lz-mgmt-sec-admins-group to manage keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
+      - allow service blockstorage, objectstorage-${var.region}, FssOc1Prod, oke, streaming to use keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
+
