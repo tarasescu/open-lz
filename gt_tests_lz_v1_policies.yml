@@ -85,5 +85,5 @@ policies_configuration:
       - allow group isv-lz-mgmt-sec-admins-group to manage vaults in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
       - allow group isv-lz-mgmt-sec-admins-group to manage secret-family in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
       - allow group isv-lz-mgmt-sec-admins-group to manage keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
-      - allow service blockstorage, objectstorage-${var.region}, FssOc1Prod, oke, streaming to use keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
+      - allow service blockstorage, objectstorage-eu-frankfurt-1, FssOc1Prod, oke, streaming to use keys in compartment isv-mgmt-cmp:isv-lz-mgmt-sec
 
